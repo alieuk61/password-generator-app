@@ -1,0 +1,198 @@
+:root{
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65;
+    --neon-green: #A4FFAF;
+    --almost-white: #E6E5EA;
+    --grey: #817D92;
+    --dark-grey: #24232C;
+    --very-dark-grey: #18171F;
+    --font: "Jetbrains Mono", monospace;
+    --heading__lg: 32px;
+    --heading__md: 24px;
+    --heading__body: 18px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body{
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: var(--very-dark-grey);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.heading__lg{
+    font-size: 32px;
+}
+
+.heading__md{
+    font-size: 24px;
+}
+
+.heading__body{
+    font-size: 18px;
+}
+
+/* password copy section */
+
+.password__output{
+    background-color: var(--dark-grey);
+    outline: none;
+    width: 33rem;
+    height: 5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.copy__icon{
+    cursor: pointer;
+}
+
+/* customise section */
+
+.customise__section{
+    width: 33rem;
+    min-height: 30rem;
+    background-color: var(--dark-grey);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* char length section */
+
+.character-length__div{
+    height: 28px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.character-length__axis{
+    height: 8px;
+    width: 100%;
+    background-color: var(--very-dark-grey);
+}
+
+.slider{
+    background-color: var(--very-dark-grey);
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+
+.slider::-moz-range-thumb{
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb:hover{
+    background-color: var(--very-dark-grey);
+    border: 2px solid var(--neon-green);
+}
+
+.slider::-moz-range-thumb:active{
+    background-color: var(--very-dark-grey);
+    border: 2px solid var(--neon-green);
+}
+
+p{
+    color: var(--almost-white);
+}
+
+/* checkbox section */
+
+.checkbox__div{
+    display: grid;
+    gap: 20px;
+    position: relative;
+}
+/* Create a custom checkbox */
+
+input[type='checkbox']{
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+input[type='checkbox']:checked + .custom-checkbox{
+    background-image: url('assets/images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--neon-green);
+    border: 2px solid var(--neon-green);
+}
+
+.custom-checkbox{
+    height: 22px;
+    width: 22px;
+    background-color: var(--dark-grey);
+    border: 2px solid var(--almost-white);
+}
+
+/* generate button section */
+
+.generate__button{
+    background-color: var(--neon-green);
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.generate__text{
+    color: var(--dark-grey);
+    font-size: 18px;
+}
+
+/* password strength section */
+
+.password-strength__bars{
+    display: flex;
+    gap: 7px;
+}
+
+.strength__bar{
+    width: 10px;
+    height: 28px;
+    border: 2px solid white;
+}
+
+.password-strength__div{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #18171F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.password-strength__rating{
+    font-size: var(--heading__body);
+}

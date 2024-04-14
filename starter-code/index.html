@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+
+  <main>
+    <h5 class="heading__body" style="color: #817D92; text-align: center; margin-bottom: 10px;">Password Generator</h5>
+    <section>
+      <div class="password__output">
+        <p class="heading__lg password" style="color: #817D92;">P4$5W0rD!</p>
+        <span style="display: flex; gap: 10px;">
+          <h5 class="heading__body copied-text" style="color: #A4FFAF; display: none;">COPIED</h5>
+          <img src="assets/images/icon-copy.svg" class="copy__icon">
+        </span>
+      </div>
+
+      <div class="customise__section">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h6 style="color: #E6E5EA;" class="heading__body">Character Length</h6>
+          <p class="character-length heading__lg" style="color: #A4FFAF;">10</p> <!--this will change depending on the buttons position on the line-->
+        </div>
+
+        <!-- character length button -->
+        <div class="character-length__div">
+          <input type="range" min="1" max="20" value="10" autocomplete="off" class="slider">
+        </div>
+
+        <!-- checkboxes -->
+        <div class="checkbox__div">
+          <label style="display: flex; gap: 20px;">
+            <input type="checkbox" autocomplete="off" name="upper" id="checkbox__upper">
+            <div class="custom-checkbox"></div>
+            <p class="heading__body">Include Uppercase Letters</p>
+          </label>
+          <label style="display: flex; gap: 20px;">
+            <input type="checkbox" autocomplete="off" name="lower" id="checkbox__lower">
+            <div class="custom-checkbox"></div>
+            <p class="heading__body">Include Lowercase Letters</p>
+          </label>
+          <label style="display: flex; gap: 20px;">
+            <input type="checkbox" autocomplete="off" name="numbers" id="checkbox__numbers">
+            <div class="custom-checkbox"></div>
+            <p class="heading__body">Include Numbers</p>
+          </label>
+          <label style="display: flex; gap: 20px;">
+            <input type="checkbox" autocomplete="off" name="symbols" id="checkbox__symbols">
+            <div class="custom-checkbox"></div>
+            <p class="heading__body">Include Symbols</p>
+          </label>
+        </div>
+
+        <!-- strength rating section -->
+        <div class="password-strength__div">
+          <h4 style="font-size: 18px; text-transform: uppercase; color: #817D92;">Strength</h4>
+          <div style="display: flex; gap: 15px;">
+            <h5 class="password-strength__rating" style="text-transform: uppercase; color: #E6E5EA;"></h5>
+            <section class="password-strength__bars">
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+            </section>
+          </div>
+        </div>
+
+        <!-- generate btn -->
+        <button class="generate__button">
+          <h5 class="generate__text">GENERATE</h5>
+          <span>
+            <img src="assets/images/icon-arrow-right.svg">
+          </span>
+        </button>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
